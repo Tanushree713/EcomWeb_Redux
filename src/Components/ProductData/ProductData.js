@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Cards from "../Cards/Cards";
-import axios from "axios";
+import { useDispatch , useSelector} from "react-redux";
+import {fetchProducts} from '../../store/apiCallSlice'
 
 
 function ProductData() {
-  const [datas, setDatas] = useState([]);
+
+  const dispatch = useDispatch() ;
+  const {data : datas} = useSelector(state => state.apiCall)
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = () => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((response) => {
-        setDatas(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    // axios
+    //   .get("https://fakestoreapi.com/products")
+    //   .then((response) => {
+    //     setDatas(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching data:", error);
+    //   });
+
+        dispatch(fetchProducts()) ;
+        
   };
   return (
     <>
