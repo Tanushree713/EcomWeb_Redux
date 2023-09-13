@@ -20,7 +20,7 @@ function MyCart(){
 
     return(
         <>
-        <h2>My Cart</h2>
+        <h1 className="head1">My Cart</h1>
         <div className="Gallery">
           {productsdata}
         </div>

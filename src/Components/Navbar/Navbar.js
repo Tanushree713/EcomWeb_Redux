@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchData from '../SearchData/SearchData';
-import { useSelector } from 'react-redux';
+import { useSelector} from 'react-redux'
 
 function Navbar() {
 
@@ -9,10 +8,15 @@ function Navbar() {
   return (
     <>
     <div className="topnav">
-    <span className="active">LOGO</span>
+    <span className="active">ECOMmerce</span>
    <Link className="active1" to='/'>Home</Link>
-   
-   <SearchData/>
+   <div className="search">
+          <input
+            type="text"
+            placeholder="Search Products here..."
+            name="input"
+          />
+        </div>
    <Link to='/cart'>
    <button className='btn3'>My Cart {cartProducts.length}</button>
    </Link>

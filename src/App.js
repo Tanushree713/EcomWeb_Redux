@@ -5,6 +5,7 @@ import Navbar from '../src/Components/Navbar/Navbar';
 import MyCart from "./Components/MyCart/MyCart";
 import { Provider } from "react-redux";
 import store from "./store/Store";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProductData />} />
         <Route path="/cart" element={<MyCart />} />
+        <Route path="/ProductDetails/:id" element={<ProductDetails/>} />
 
 
         <Route path="*" element={<ProductData />} />

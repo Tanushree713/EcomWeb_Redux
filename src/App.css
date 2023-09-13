@@ -9,7 +9,7 @@
   margin: 10px;
   padding: 18px;
   background-color: #0a0a0a;
-  cursor: pointer;
+
   
 }
 .card:hover {
@@ -98,14 +98,14 @@
 }
 
 .search{
-  float: right;
-  width: 30%;
+  position: absolute;
+  right: 6rem;
+  width: 35%;
 }
 input{
   padding: 11px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-right: 10px;
   width: 60%;
 }
 .head1 {
@@ -114,12 +114,15 @@ input{
   text-align: center;
   text-decoration: underline;
   word-spacing: 2px;
-  color: #0a0a0a;
+  color: #0056b3;
 }
 .Gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .topnav {
@@ -128,6 +131,7 @@ input{
   cursor: pointer;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 7px 15px;
 }
@@ -155,22 +159,85 @@ input{
 }
 
 .btn3 {
-  float: right;
+  position: absolute;
+  right: 5rem;
   padding: 6px;
   margin-top: 8px;
-  margin-right: 16px;
   background: #ddd;
   font-size: 17px;
   border: none;
   cursor: pointer;
 }
 
+label {
+  margin-bottom: 1em;
+  font-size: 19px;
+}
 
+input[type="number"] {
+  padding: 9px;
+  margin: 1em;
+  font-size: 15px;
+  border: 1px solid #000000;
+  border-radius: 4px ;
+  width: 7vw;
+  cursor: pointer;
+}
+.maindiv{
+   display: flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+
+}
+.leftmaindiv{
+  position: absolute;
+  left: 0;
+  top: 35%;
+}
+.firstmainImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.secondmainImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.rightmaindiv{
+  position: absolute;
+  right: 0;
+  top: 30%;
+  border: 2px solid #ccc;
+  padding: 2rem;
+  height: 290px;
+ 
+
+}
+#ImageSlices {
+    height: 150px;
+    width: 90%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: border-color 0.25s ease-in-out;
+}
+#ImageSlices:active{
+  border-color: rgb(56, 56, 237);
+     
+}
 @media screen and (max-width: 600px) {
   .topnav{
     position: relative;
+    height: 11vh;
   }
   .search {
+    position: absolute;
+    top: 40px;
+    left: 2px;
     width: 100%;
   }
  .btn3 {
@@ -184,8 +251,103 @@ input{
   }  
   
 }
+@media screen and (max-width: 899px){
+  .rightmaindiv{
+   margin-top: 50%;
+   margin-right:50% ;
+  }
+}
+@media screen and (max-width: 840px){
+  .rightmaindiv{
+    margin-top: 56%;
+    margin-right:60% ;
+   }
+}
+@media screen and (max-width: 740px){
+  .rightmaindiv{
+    margin-top: 64%;
+    margin-right:60% ;
+   }
+}
+@media screen and (max-width: 650px){
+  .rightmaindiv{
+    margin-top: 74%;
+    margin-right:60% ;
+   }
+}
+@media screen and (max-width: 630px){
+  .rightmaindiv{
+    margin-top: 100%;
+   
 
+   }
+}
+@media screen and (max-width: 585px){
+  .rightmaindiv{
+    margin-top: 110%;
+   
+   }
+}
+@media screen and (max-width: 530px){
+  .rightmaindiv{
+    margin-top: 120%;
+   
+   }
+}
+@media screen and (max-width: 510px){
+  .rightmaindiv{
+    margin-top: 140%;
+  
+   }
+}
+@media screen and (max-width: 420px){
+  .rightmaindiv{
+    margin-top: 160%;
+   
+   }
+}
+@media screen and (max-width: 370px){
+  .rightmaindiv{
+    margin-top: 180%;
+    margin-right: 0;
+   
+   }
+}
+@media screen and (max-width: 340px){
+  .rightmaindiv{
+    margin-top: 200%;
+   
+   }
+}
+@media screen and (max-width: 325px){
+  .rightmaindiv{
+    margin-top: 210%;
+   
+   
+   }
+  }
+  @media screen and (max-width: 320px){
+    .rightmaindiv{
+      margin-top: 310%;
+      
+     
+     }
+    }
+    @media screen and (max-width:300px ){
+      .rightmaindiv{
+        margin-top: 330%;
+        }
+      }
 
-
+      @media screen and (max-width: 340px ){
+        .btn3 {
+          position: absolute;
+          right: 1px;
+          padding: 3px;
+          margin-top: 40px;
+          font-size: 19px;
+         
+        }
+        }    
 
 

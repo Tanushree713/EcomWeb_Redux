@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect , useState} from "react";
 import Cards from "../Cards/Cards";
-import { useDispatch , useSelector} from "react-redux";
-import {fetchProducts} from '../../store/apiCallSlice'
+import { useDispatch , useSelector } from "react-redux";
+import {fetchProducts} from '../../store/apiCallSlice';
+
 
 
 function ProductData() {
-
   const dispatch = useDispatch() ;
-  const {data : datas} = useSelector(state => state.apiCall)
+  const {data : datas , status} = useSelector(state => state.apiCall)
 
   useEffect(() => {
     fetchData();
@@ -26,10 +26,12 @@ function ProductData() {
         dispatch(fetchProducts()) ;
         
   };
+
   return (
     <>
       <h1 className="head1">Products</h1>
       <div className="Gallery">
+    
         {datas.length > 0 ? (
           datas.map((data) => (
             <Cards
@@ -43,9 +45,11 @@ function ProductData() {
               rating={data.rating.rate}
             />
           ))
-        ) : (
-          <h1>Oops!! Not Found..</h1>
+        )   
+        : (
+          <h1>Oops!! Data Not Found..<br/>!! Plz wait !!</h1>
         )}
+        
       </div>
       
     </>
