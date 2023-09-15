@@ -1,4 +1,4 @@
-import React, { useEffect , useState} from "react";
+import React, { useEffect } from "react";
 import Cards from "../Cards/Cards";
 import { useDispatch , useSelector } from "react-redux";
 import {fetchProducts} from '../../store/apiCallSlice';
@@ -7,7 +7,8 @@ import {fetchProducts} from '../../store/apiCallSlice';
 
 function ProductData() {
   const dispatch = useDispatch() ;
-  const {data : datas , status} = useSelector(state => state.apiCall)
+  const {data : datas } = useSelector(state => state.apiCall);
+  console.log("Data" , datas) ;
 
   useEffect(() => {
     fetchData();

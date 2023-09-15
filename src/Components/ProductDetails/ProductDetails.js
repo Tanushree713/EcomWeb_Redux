@@ -1,30 +1,37 @@
 import { fetchProductsDetails} from '../../store/productDetailsSlice' ;
 import { useDispatch, useSelector } from "react-redux";
 import React ,{ useState , useEffect} from "react";
+import { useParams } from 'react-router-dom';
 
 function ProductDetails() {
     const [numTickets, setNumTickets] = useState(1);
 
+   const { id: productId } = useParams();
     const dispatch = useDispatch() ;
+    
   const {data : datas , status} = useSelector(state => state.productDetails);
-  console.log("productdata" ,data) ;
+  console.log("productdata" ,datas) ;
 
   useEffect(() => {
     fetchDataDetails();
-  }, [productId]);
+
+  }, []);
 
   const fetchDataDetails = () => {
     
         dispatch(fetchProductsDetails(productId)) ;
         
   };
+  if (!datas) {
+    return <h1>Loading.....</h1>
+  }
   return (
     <>
       <h1 className="head1">Product-Details</h1>
       <div className="maindiv">
       <div className="leftmaindiv">
         <div className="firstmainImg">
-          <img src={datas.image} className="card_img" alt={datas.title} />
+          <img src={datas.image} className="cardDetails_img" alt={datas.title} />
         </div>
         <div className="secondmainImg">
           <div className="childs">
@@ -42,16 +49,16 @@ function ProductDetails() {
         </div>
       </div>
       <div className="rightmaindiv">
-        <h4 className="card_title">{datas.title}</h4>
+        <h4 className="cardDetails_title">{datas.title}</h4>
      
           <button className="btn1">
-            {datas.rating} <i class="fa-sharp fa-solid fa-star" />
+            {datas.rating?.rate} <i class="fa-sharp fa-solid fa-star" />
           </button>
           <div className="delivery">
                 <p>Free Delivery</p>
             </div>
       
-        <h3 className="card_price">₹{datas.price}</h3>
+        <h3 className="cardDetails_price">₹{datas.price}</h3>
               <span>onwards</span>
 
 

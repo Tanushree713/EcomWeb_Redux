@@ -1,13 +1,16 @@
 *{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
 }
 .card {
-  width: 231px;
-  height: 420px;
+  width: 270px;
+  height: 400px;
   border: 1px solid #938f8f;
   border-radius: 5px;
   margin: 10px;
-  padding: 18px;
+  padding: 15px;
   background-color: #0a0a0a;
 
   
@@ -23,7 +26,7 @@
 }
 
 .card_title {
-  margin-bottom: 0.5px;
+  margin-bottom: 5px;
   color: #ffffffaf;
   white-space: nowrap; 
   overflow: hidden; 
@@ -31,20 +34,21 @@
   max-width: 100%;
 }
 .card_price{
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   color: #fff;
   display: inline-block;
 
   }
   span{
     color: #7d7b7b;
-    padding: 0 10px;
+    padding: 3px 10px;
     font-size: 14px;
     font-weight: 800;
   }
   .delivery{
+    margin-bottom: 5px;
     color: #7d7b7b;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 900;
     display: flex;
     flex-direction: column;
@@ -126,7 +130,6 @@ input{
 }
 
 .topnav {
-  overflow: hidden;
   background-color: #0a0a0a;
   cursor: pointer;
   position: fixed;
@@ -134,6 +137,8 @@ input{
   left: 0;
   width: 100%;
   padding: 7px 15px;
+  z-index: 100;
+  transition: top 0.3s;
 }
 
 .active , .active1{
@@ -186,20 +191,21 @@ input[type="number"] {
 .maindiv{
    display: flex;
    position: relative;
-   justify-content: center;
-   align-items: center;
 
 }
 .leftmaindiv{
   position: absolute;
   left: 0;
-  top: 35%;
+  top: 1rem ;
+ 
 }
 .firstmainImg{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border: 2px solid #ccc;
+  margin: 1rem;
 
 }
 .secondmainImg{
@@ -210,11 +216,12 @@ input[type="number"] {
 }
 .rightmaindiv{
   position: absolute;
-  right: 0;
-  top: 30%;
-  border: 2px solid #ccc;
+  top: 0;
+  left: 50%;
+  border: 2px solid #0f9408;
   padding: 2rem;
-  height: 290px;
+  margin-top: 32px;
+  margin-right:20px ;
  
 
 }
@@ -224,15 +231,62 @@ input[type="number"] {
     border: 2px solid #ccc;
     cursor: pointer;
     transition: border-color 0.25s ease-in-out;
+    margin: 0.25rem;
 }
 #ImageSlices:active{
   border-color: rgb(56, 56, 237);
      
 }
+
+.cardDetails_img {
+  width: 260px;
+  height: 250px;
+  margin-bottom: 0.1rem;
+}
+.cardDetails_title{
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #12630e;
+ 
+
+
+}
+.cardDetails_price {
+  display: inline;
+  color: #12630e;
+  font-weight: 900;
+}
+.details{
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #434343;
+  line-height: 22px;
+  word-spacing: 0.3rem;
+}
+
+.btn4{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 5px 8px ;
+  border: 2px solid blue;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 30%;
+}
+.btn4:hover{
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
 @media screen and (max-width: 600px) {
   .topnav{
-    position: relative;
-    height: 11vh;
+    position: fixed;
+    height: 14vh;
+   
   }
   .search {
     position: absolute;
@@ -247,50 +301,88 @@ input[type="number"] {
     border-radius: 5px;
     }
   .head1{
-    margin-top: 20px;
+    margin-top: 140px;
   }  
+
   
+}
+@media screen and (max-width: 1230px) {
+  .rightmaindiv{
+    position: absolute;
+    left: 60%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .rightmaindiv{
+    position: absolute;
+    left: 70%;
+  }
 }
 @media screen and (max-width: 899px){
   .rightmaindiv{
-   margin-top: 50%;
-   margin-right:50% ;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    margin-top: 56%;
+    
+   
   }
 }
-@media screen and (max-width: 840px){
+ @media screen and (max-width: 820px){
   .rightmaindiv{
-    margin-top: 56%;
-    margin-right:60% ;
+    position: relative;
+    left: 5px;
+    bottom: 0;
+    padding: 2rem;
+    margin-top: 60%;
+
    }
 }
-@media screen and (max-width: 740px){
+@media screen and (max-width: 760px){
   .rightmaindiv{
     margin-top: 64%;
-    margin-right:60% ;
+   
    }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 718px){
+  .rightmaindiv{
+    margin-top: 68%;
+   
+   }
+}
+@media screen and (max-width: 668px){
   .rightmaindiv{
     margin-top: 74%;
-    margin-right:60% ;
+  
    }
 }
-@media screen and (max-width: 630px){
+@media screen and (max-width: 632px){
   .rightmaindiv{
     margin-top: 100%;
+   
+   
+
+   }
+}
+@media screen and (max-width: 624px){
+  .rightmaindiv{
+    margin-top: 110%;
+   
    
 
    }
 }
 @media screen and (max-width: 585px){
   .rightmaindiv{
-    margin-top: 110%;
+    margin-top: 120%;
    
    }
 }
+
 @media screen and (max-width: 530px){
   .rightmaindiv{
-    margin-top: 120%;
+    margin-top: 130%;
    
    }
 }
@@ -302,18 +394,24 @@ input[type="number"] {
 }
 @media screen and (max-width: 420px){
   .rightmaindiv{
-    margin-top: 160%;
+    margin-top: 170%;
    
    }
 }
-@media screen and (max-width: 370px){
+@media screen and (max-width: 440px){
+  .rightmaindiv{
+    margin-top: 175%;
+   
+   }
+}
+@media screen and (max-width: 385px){
   .rightmaindiv{
     margin-top: 180%;
     margin-right: 0;
    
    }
 }
-@media screen and (max-width: 340px){
+@media screen and (max-width: 344px){
   .rightmaindiv{
     margin-top: 200%;
    
@@ -326,18 +424,38 @@ input[type="number"] {
    
    }
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 316px){
     .rightmaindiv{
       margin-top: 310%;
       
      
      }
     }
-    @media screen and (max-width:300px ){
+    @media screen and (max-width: 309px){
+     .heading1{
+        font-size: 26px;
+       
+       }
+      }
+
+    @media screen and (max-width:305px ){
       .rightmaindiv{
         margin-top: 330%;
         }
-      }
+      } 
+      @media screen and (max-width:289px ){
+        .rightmaindiv{
+          margin-top: 339%;
+         
+          }
+          input[type="number"] {
+            padding: 5px 10px;
+            font-size: 20px;
+            border: 2px solid #000000;
+            width: 11vw;
+           
+          }   
+        } 
 
       @media screen and (max-width: 340px ){
         .btn3 {

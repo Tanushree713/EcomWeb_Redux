@@ -22,7 +22,7 @@ const Cards = (props) => {
   const navigate = useNavigate();
 
   function handleNavigate() {
-    navigate(`/ProductDetails${props.products.id}`);
+    navigate(`/ProductDetails/${props.products.id}`);
     dispatch(fetchProductsDetails(props.products.id));
     
    

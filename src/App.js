@@ -11,19 +11,19 @@ import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 function App() {
   return (
-    <div>
+   <>
       <Provider store={store}>
       <Navbar/>
       <Routes>
         <Route path="/" element={<ProductData />} />
         <Route path="/cart" element={<MyCart />} />
-        <Route path="/ProductDetails/:id" element={<ProductDetails/>} />
+        <Route exact path="/ProductDetails/:id" element={<ProductDetails/>} />
 
 
         <Route path="*" element={<ProductData />} />
       </Routes>
       </Provider>
-    </div>
+      </>
     
   );
 }
