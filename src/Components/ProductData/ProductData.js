@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Cards from "../Cards/Cards";
 import { useDispatch , useSelector } from "react-redux";
 import {fetchProducts} from '../../store/apiCallSlice';
+import Footer from "../../Pages/Footer/Footer";
 
 
 
@@ -30,7 +31,7 @@ function ProductData() {
 
   return (
     <>
-      <h1 className="head1">Products</h1>
+      <h1 id="head1">Products</h1>
       <div className="Gallery">
     
         {datas.length > 0 ? (
@@ -52,7 +53,7 @@ function ProductData() {
         )}
         
       </div>
-      
+      <Footer/>
     </>
   );
 }

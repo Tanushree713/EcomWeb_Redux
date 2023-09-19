@@ -2,6 +2,7 @@ import { fetchProductsDetails} from '../../store/productDetailsSlice' ;
 import { useDispatch, useSelector } from "react-redux";
 import React ,{ useState , useEffect} from "react";
 import { useParams } from 'react-router-dom';
+import Footer from '../../Pages/Footer/Footer';
 
 function ProductDetails() {
     const [numTickets, setNumTickets] = useState(1);
@@ -27,7 +28,7 @@ function ProductDetails() {
   }
   return (
     <>
-      <h1 className="head1">Product-Details</h1>
+      <h1 id="head1">Product-Details</h1>
       <div className="maindiv">
       <div className="leftmaindiv">
         <div className="firstmainImg">
@@ -35,16 +36,16 @@ function ProductDetails() {
         </div>
         <div className="secondmainImg">
           <div className="childs">
-            <img id='ImageSlices' src='https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-chambray-shirt--HPS73WARS900_PM2_Front%20view.png?wid=490&hei=490'/>
+            <img id='ImageSlices' src={datas.image}/>
           </div>
           <div className="childs">
-          <img  id='ImageSlices' src='https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-chambray-shirt--HPS73WARS900_PM2_Front%20view.png?wid=490&hei=490'/>
+          <img  id='ImageSlices' src={datas.image}/>
           </div>
           <div className="childs">
-          <img  id='ImageSlices'src='https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-chambray-shirt--HPS73WARS900_PM2_Front%20view.png?wid=490&hei=490'/>
+          <img  id='ImageSlices'src={datas.image}/>
           </div>
           <div className="childs">
-          <img  id='ImageSlices' src='https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-chambray-shirt--HPS73WARS900_PM2_Front%20view.png?wid=490&hei=490'/>
+          <img  id='ImageSlices' src={datas.image}/>
           </div>
         </div>
       </div>
@@ -83,6 +84,7 @@ function ProductDetails() {
     
       </div>
       </div>
+   
     </>
   );
 }
