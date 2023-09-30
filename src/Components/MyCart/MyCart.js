@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Cards from "../Cards/Cards";
 import { Link } from "react-router-dom";
-import Footer from "../../Pages/Footer/Footer";
+
 
 function MyCart() {
   const CartProducts = useSelector((state) => state.cart);

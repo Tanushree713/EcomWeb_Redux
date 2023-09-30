@@ -5,6 +5,7 @@ import {fetchProductsDetails } from '../../store/productDetailsSlice';
 
 
 const Cards = (props) => {
+  
   const dispatch = useDispatch();
   const isProductInCart = useSelector((state) =>
     state.cart.some((item) => item.id === props.products.id)

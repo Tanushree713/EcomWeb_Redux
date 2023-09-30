@@ -4,21 +4,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const HomeLayout = () => {
+  const [search, setSearch] = useState("");
   const [toggle, setToggle] = useState(false);
   const cartProducts = useSelector((state) => state.cart);
   const showMenu = () => {
     setToggle(!toggle);
   };
-
-  const [userInputsearch, setUserInputsearch] = useState();
   const navigate = useNavigate();
 
   function handleSearch(e) {
     e.preventDefault();
-    {
+    
       navigate("/products");
-      setUserInputsearch("");
-    }
+      setSearch("");
+    
   }
 
   return (
@@ -38,17 +37,29 @@ const HomeLayout = () => {
 
             <Link to="/contact">
               {" "}
-              <span> Contact Us </span>{" "}
+              <span> ContactUs </span>{" "}
             </Link>
           </div>
 
           <div className="header-right">
+
             <Link to="/cart">
               {" "}
               <span>MyCart</span>{" "}
               <p className="count"> {cartProducts.length} </p>
             </Link>
           </div>
+           
+            <div>
+            <Link to="/signup">
+              <button className="btn6">signup</button>
+            </Link>
+
+            <Link to="/login">
+            {" "}
+              <button className="btn6">Login</button>{" "}
+            </Link>
+            </div>
         </div>
         <div className="searchTop">
           <div className="search">
@@ -56,7 +67,9 @@ const HomeLayout = () => {
               type="text"
               placeholder="Search Products here..."
               name="input"
-              value={userInputsearch}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+             
             />
           </div>
           <div>
@@ -100,6 +113,21 @@ const HomeLayout = () => {
                     <p className="count"> {cartProducts.length} </p>
                   </Link>
                 </li>
+                <li>
+                  <Link to="/signup" className="btn6" >
+                    {" "}
+                    <button> Signup</button>
+                   
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login" className="btn6">
+                    {" "}
+                    <button>Login</button>
+                  
+                  </Link>
+                </li>
+
               </ul>
             </div>
           )}

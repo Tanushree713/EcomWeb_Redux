@@ -45,7 +45,6 @@ body {
 }
 .header-right a {
   padding: 0 10px;
-  margin: 0 5px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -247,11 +246,12 @@ span {
 }
 
 .search {
-  width: 60%;
+  width: 50%;
+  margin-left: 2rem;
 }
 .searchTop{
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 input {
@@ -391,10 +391,26 @@ input[type="number"] {
   border-radius: 4px;
   font-size: 18px;
   font-weight: 600;
-  margin-left: 30%;
+  margin-left: 1.2rem;
 }
 .btn4:hover {
   background-color: white;
+  color: #ffe342;;
+  cursor: pointer;
+}
+.btn6{
+  background-color: #ffd700;;
+  color: white;
+  cursor: pointer;
+  padding: 5px 8px;
+  border: 2px solid #ffd700;;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.btn6:hover {
+  background-color: rgb(0, 0, 0);
   color: #ffe342;;
   cursor: pointer;
 }
@@ -438,6 +454,7 @@ input[type="number"] {
     padding: 2rem;
     margin-top: 56%;
   }
+  
 }
 @media screen and (max-width: 820px) {
   .rightmaindiv {
@@ -447,6 +464,7 @@ input[type="number"] {
     padding: 2rem;
     margin-top: 60%;
   }
+  
 }
 @media screen and (max-width: 760px) {
   .rightmaindiv {
@@ -517,7 +535,7 @@ input[type="number"] {
 }
 @media screen and (max-width: 316px) {
   .rightmaindiv {
-    margin-top: 310%;
+    margin-top: 230%;
   }
 }
 @media screen and (max-width: 309px) {
@@ -528,12 +546,12 @@ input[type="number"] {
 
 @media screen and (max-width: 305px) {
   .rightmaindiv {
-    margin-top: 330%;
+    margin-top: 240%;
   }
 }
 @media screen and (max-width: 289px) {
   .rightmaindiv {
-    margin-top: 339%;
+    margin-top: 249%;
   }
   input[type="number"] {
     padding: 5px 10px;
