@@ -1,5 +1,4 @@
 import shop1 from '../../Assets/Images/BestFashion.png';
-import shop2 from '../../Assets/Images/shop2.jpg';
 import shop3 from '../../Assets/Images/shop3.webp';
 
 import womendress1 from '../../Assets/Images/Trendylooks.jpg';
@@ -21,9 +20,6 @@ export const ProductSliderArray = [
         image:shop3 ,
     } ,
 
-    {
-        image: shop2 ,
-    } ,
     {
         image: shop1,
     } ,

@@ -7,6 +7,7 @@ const HomeLayout = () => {
   const [search, setSearch] = useState("");
   const [toggle, setToggle] = useState(false);
   const cartProducts = useSelector((state) => state.cart);
+  const wishlistProducts = useSelector((state) => state.cart )
   const showMenu = () => {
     setToggle(!toggle);
   };
@@ -40,17 +41,24 @@ const HomeLayout = () => {
               <span> ContactUs </span>{" "}
             </Link>
           </div>
-
           <div className="header-right">
-
-            <Link to="/cart">
+            <div>
+            <Link to="/wishlist">
+              {" "}
+              <span>wishLists</span>{" "}
+              <p className="count"> {wishlistProducts.length} </p>
+            </Link>
+            </div>
+           
+             <div>
+             <Link to="/cart">
               {" "}
               <span>MyCart</span>{" "}
               <p className="count"> {cartProducts.length} </p>
             </Link>
-          </div>
-           
-            <div>
+             </div>
+              
+             <div className="buttons">
             <Link to="/signup">
               <button className="btn6">signup</button>
             </Link>
@@ -60,6 +68,8 @@ const HomeLayout = () => {
               <button className="btn6">Login</button>{" "}
             </Link>
             </div>
+          </div>
+           
         </div>
         <div className="searchTop">
           <div className="search">
@@ -104,6 +114,13 @@ const HomeLayout = () => {
                   <Link to="/contact">
                     {" "}
                     <span> Contact Us </span>{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/wishlist" className="res_count">
+                    {" "}
+                    <span> wishLists</span>
+                    <p className="count"> {wishlistProducts.length} </p>
                   </Link>
                 </li>
                 <li>

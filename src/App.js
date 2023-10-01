@@ -8,6 +8,7 @@ import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import HomePage from "./Pages/HomePage/HomePage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import HomeLayout from "./Pages/HomeLayout/HomeLayout";
+import WishLists from "./Components/WishLists/WishLists";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/products" element={< ProductData/>} />
         <Route path="/contact" element={<ContactPage/>} />
         <Route path="/cart" element={<MyCart />} />
+        <Route path="/wishlist" element={<WishLists />} />
 
         <Route exact path="/ProductDetails/:id" element={<ProductDetails/>} />
 
